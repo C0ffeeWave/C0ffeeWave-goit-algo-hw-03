@@ -13,3 +13,8 @@ def get_days_from_today(date: str) -> int:
     except ValueError:
         # Обробка винятку неправильного формату
         return "Неправильний формат дати. Введіть дату у форматі 'РРРР-ММ-ДД'."
+    
+    #Тестування
+result = get_days_from_today("2021-10-09")
+print(result)
+    #Результат = 924
