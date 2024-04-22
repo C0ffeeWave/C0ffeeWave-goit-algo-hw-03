@@ -7,7 +7,8 @@ def get_numbers_ticket(min_value, max_value, quantity):
         return []
     # Генерація унікальних лотерейних чисел
     lottery_numbers = [random.randint(min_value, max_value) for _ in range(quantity)]
-    return sorted(set(lottery_numbers))  # Видаляємо повторювані числа множиною і сортуємо
+    return sorted(random.sample(range(min_value, max_value + 1), quantity))
+
 
 # Тест
 lottery_numbers = get_numbers_ticket(1, 49, 6)
